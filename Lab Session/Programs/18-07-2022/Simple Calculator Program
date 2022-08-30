@@ -1,0 +1,63 @@
+/* 
+@Author: Sahaya Reshma A
+Title: Interface
+Quiz: Using interface implement a Simple Calculator
+*/
+
+
+import java.util.Scanner;
+
+interface  Calculater
+{
+	public int Addition(int i,int j);
+	public int Subtraction(int i,int j);
+	public int Multiplication(int i,int j);
+	public int Division(int i,int j);
+}
+class LogicImplementation  implements Calculater
+{
+	public int Addition(int i , int j)
+	{
+	int Sum=0;
+	Sum=i+j;
+	return Sum;
+	}
+	public int Subtraction(int i , int j)
+	{
+	int Sub=0;
+	Sub=i-j;
+	return Sub;
+	}
+	public int Multiplication(int i , int j)
+	{
+	int Mult=0;
+	Mult=i*j;
+	return Mult;
+	}
+	public int Division(int i , int j)
+	{
+	int Div=0;
+	Div=i/j;
+	return Div;
+	}
+}
+public class SimpleCalculater1
+{
+	public static void main(String[]args)
+	{
+	Scanner sc =new Scanner(System.in);
+	System.out.println("Enetr First Number ");
+	int F_value =sc.nextInt();
+	System.out.println("Enetr Second Number ");
+	int S_value = sc.nextInt();
+	LogicImplementation logicimplementation =new LogicImplementation();
+	int Add =logicimplementation.Addition(F_value,S_value);
+	System.out.println(Add);
+	int Sub =logicimplementation.Subtraction(F_value,S_value);
+	System.out.println(Sub);
+	int Mult =logicimplementation.Multiplication(F_value,S_value);
+	System.out.println(Mult);
+	int Div =logicimplementation.Division(F_value,S_value);
+	System.out.println(Div);
+	}  
+}
